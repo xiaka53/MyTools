@@ -24,7 +24,7 @@ func Info(a ...interface{}) {
 //绿色颜色输出信息
 func InfoLn(a ...interface{}) {
 	fmt.Print("\033[32m")
-	Outputs(a...)
+	OutputLn(a...)
 	noStyle()
 }
 
@@ -38,7 +38,7 @@ func ErrInfo(a ...interface{}) {
 //红色颜色输出信息
 func ErrInfoLn(a ...interface{}) {
 	fmt.Print("\033[31m")
-	Outputs(a...)
+	OutputLn(a...)
 	noStyle()
 }
 

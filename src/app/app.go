@@ -29,8 +29,7 @@ func init() {
 
 	flag.Usage = usage
 	flag.Parse()
-
-	if len(flag.Args()) > 1 {
+	if len(flag.Args()) > 0 {
 		arg := flag.Arg(0)
 		switch arg {
 		case "upgrade":
@@ -45,14 +44,14 @@ func init() {
 
 func Run() {
 	if v {
-
+		showVersion()
 	} else if h {
 		showHelp()
 	} else if upgrade {
-
+		showUpgrade()
 	} else if cp {
 
 	} else {
-
+		showServers()
 	}
 }
